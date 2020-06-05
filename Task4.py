@@ -28,24 +28,22 @@ outgoing_call = []
 incoming_call = []
 outgoing_text = []
 incoming_text = []
-telemarketers = []
 
 for call in calls:
-    if call[0][:3] != '140':
-        outgoing_call.append(call[0])
-        incoming_call.append(call[1])
+    outgoing_call.append(call[0])
+
+for call in calls:
+    if call[1] in outgoing_call:
+        outgoing_call.remove(call[1])
 
 for text in texts:
-    outgoing_text.append(text[0])
-    incoming_text.append(text[1])
+    if text[0] in outgoing_call:
+        outgoing_call.remove(text[0])
 
-for num in outgoing_call:
-    if ((num not in incoming_call) and
-        (num not in outgoing_text) and
-        (num not in incoming_text)):
-        telemarketers.append(num)
+    if text[1] in outgoing_call:
+        outgoing_call.remove(text[1])
 
-distinct_telemarketers = list(dict.fromkeys(telemarketers))
+distinct_telemarketers = list(set(outgoing_call))
 print("These numbers could be telemarketers:")
 for num in sorted(distinct_telemarketers):
     print(num)
