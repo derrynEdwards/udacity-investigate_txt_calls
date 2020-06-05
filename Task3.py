@@ -57,7 +57,7 @@ for call in calls:
         elif call[1][0] == '(':
             blr_calls.append(call[1][:call[1].index(')') + 1])
 
-distinct_blr_calls = list(dict.fromkeys(blr_calls))
+distinct_blr_calls = list(set(blr_calls))
 print("The numbers called by people in Bangalore have codes:")
 for num in sorted(distinct_blr_calls):
     print(num)
