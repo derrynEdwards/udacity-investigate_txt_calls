@@ -46,7 +46,6 @@ The percentage should have 2 decimal digits
 
 blr_calls = []
 blr_area_code = "(080)"
-telemarketers_code = "140"
 
 for call in calls:
     if call[0][:5] == blr_area_code:

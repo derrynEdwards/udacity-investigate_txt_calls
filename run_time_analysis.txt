@@ -1,5 +1,21 @@
-Task 0: O(1) 
-Task 1: O(n) - Linear
-Task 2: O(n) - Linear
-Task 3: O(n log n) - Log Linear
-Task 4: O(n log n) - Log Linear
+Task 0: O(1) - Task 0 is of O(1) notation because the size of 
+the lists does not affect the runtime of the code, 
+as we only extract the first and last element of the list.
+=======================================================================
+Task 1: O(n) - Task 1 is of O(n) notation because in this case,
+the size of the list will affect the runtime of the application.
+We iterate over the list once with a for loop, and also according
+to python documentation https://wiki.python.org/moin/TimeComplexity, 
+every check of x in list also comes to O(n) as worst case scenario.
+This task would have an approximate complexity of N = (3n + 6) 
+making it O(n).
+=======================================================================
+Task 2: O(n) - Task 2 is also of O(n) notation as the size of the list
+will affec tthe runtime in a linear way. In this task we would have
+a complexity of N = (4n + 9) making it O(n).
+=======================================================================
+Task 3 & Task 4 are both O(n log n) as we iterate over lists, in which
+the size of these will affect the run time. It becomes a O(n log n)
+since at one point, we have to sort over the lists. According to python
+docs https://wiki.python.org/moin/TimeComplexity, sorting has a time
+complexity of O(n log n). 

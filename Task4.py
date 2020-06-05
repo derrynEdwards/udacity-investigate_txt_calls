@@ -25,9 +25,6 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 outgoing_call = []
-incoming_call = []
-outgoing_text = []
-incoming_text = []
 
 for call in calls:
     outgoing_call.append(call[0])

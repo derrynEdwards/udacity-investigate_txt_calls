@@ -31,7 +31,6 @@ def getDistinctNumbers(a_list):
             distinct_numbers.append(row[1])
     return distinct_numbers
 
-numbers = getDistinctNumbers(texts) + getDistinctNumbers(calls)
-numbers = set(numbers)
+numbers = set(getDistinctNumbers(texts) + getDistinctNumbers(calls))
 print("There are {} different telephone numbers in the records.".format(len(numbers)))
  
