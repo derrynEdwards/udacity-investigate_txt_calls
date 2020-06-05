@@ -29,6 +29,8 @@ outgoing_call = []
 for call in calls:
     outgoing_call.append(call[0])
 
+outgoing_call = list(set(outgoing_call))
+
 for call in calls:
     if call[1] in outgoing_call:
         outgoing_call.remove(call[1])
