@@ -32,5 +32,6 @@ def getDistinctNumbers(a_list):
     return distinct_numbers
 
 numbers = getDistinctNumbers(texts) + getDistinctNumbers(calls)
+numbers = set(numbers)
 print("There are {} different telephone numbers in the records.".format(len(numbers)))
  
