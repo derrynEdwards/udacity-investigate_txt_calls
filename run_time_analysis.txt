@@ -1,0 +1,5 @@
+Task 0: O(1) 
+Task 1: O(n) - Linear
+Task 2: O(n) - Linear
+Task 3: O(n log n) - Log Linear
+Task 4: O(n log n) - Log Linear
